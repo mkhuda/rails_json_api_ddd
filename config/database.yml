@@ -8,16 +8,16 @@ development:
   <<: *default
   host: localhost
   port: 5433
-  database: brimob_rails_dev
+  database: <%= ENV["PG_TEST"] %>
 
 test: &test
   <<: *default
   host: localhost
   port: 5433
-  database: brimob_rails_test
+  database: <%= ENV["PG_DEV"] %>
 
 production:
   <<: *default
   host: localhost
   port: 5433
-  database: brimob_rails
+  database: <%= ENV["PG_PROD"] %>
