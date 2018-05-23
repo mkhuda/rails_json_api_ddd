@@ -9,11 +9,18 @@ one:
   fullname: Wak Sunari
   email: waksunari@gmail.com
   password_digest: <%= BCrypt::Password.create('12345', cost: 4) %>
-# column: value
-#
+  role: 0
+
 two:
   id: 2
   fullname: Bayu Skak
   email: bayuskak@gmail.com
   password_digest: <%= BCrypt::Password.create('12345', cost: 4) %>
-# column: value
+  role: 0
+
+three:
+  id: 3
+  fullname: Super Admin
+  email: superadmin@gmail.com
+  password_digest: <%= BCrypt::Password.create('12345', cost: 4) %>
+  role: 1
