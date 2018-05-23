@@ -34,4 +34,8 @@ class UserTest < ActiveSupport::TestCase
     assert_not_nil user, "user succesfully authenticate by email"
   end
 
+  test "total of user with role member" do
+    user = User.where("role = ?", 0)
+    assert_equal 2, user.count, "member should be 2"
+  end
 end
