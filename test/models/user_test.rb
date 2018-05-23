@@ -38,4 +38,9 @@ class UserTest < ActiveSupport::TestCase
     user = User.where("role = ?", 0)
     assert_equal 2, user.count, "member should be 2"
   end
+
+  test "total of user with role admin" do
+    user = User.where("role = ?", 1)
+    assert_equal 1, user.count, "member should be 1"
+  end
 end
